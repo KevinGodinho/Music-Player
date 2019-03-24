@@ -101,4 +101,109 @@ hr {
 
 input, select {
     vertical-align:middle;
+} 
+/* END OF RESET */
+
+
+
+/* DEFINE VARIABLES */
+:root {
+    --primary: #553285;
+    --secondary: #36175E;
+    --ltgrey: #aaa;
+    --dkgrey: #666;
+    
+    --text: var(--secondary);
+    
+    --defaultFont: 'Source Sans Pro', sans-serif;
+    
+    --normal: 400;
+    --bold: 700;
+    
+    --gutter: 2%;
 }
+
+
+
+/* START OF SMALL LAYOUT (MOBILE FIRST) */
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* BODY */
+body {
+    font-size: 16px;
+    font-family: var(--defaultFont);
+    font-weight: var(--normal);
+    color: var(--text);
+    background-color: white;
+}
+
+/* WRAPPER */
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: .5rem var(--gutter);
+    font-size: 1.5rem;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    border-top: 1px solid var(--dkgrey);
+    display: flex;
+}
+
+nav div {
+    flex-basis: 25%;
+    text-align: center;
+}
+
+nav div a {
+    display: block;
+    font-size: 1.7rem;
+    padding: .5rem;
+    color: var(--ltgrey);
+}
+
+nav div.active a {
+    background-color: var(--primary);
+    color: white;
+}
+
+
+
+/* START OF MEDIUM LAYOUT WITH QUERY */
+/* 20rem = 464px */
+/* Not creating a large screen layout, just using medium */
+@media only screen and (min-width: 29rem) { 
+    
+} // end media query
+
+
+
+
+
+
+
+
+
+
+
+
+
+
