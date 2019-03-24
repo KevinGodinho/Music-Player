@@ -186,6 +186,10 @@ nav div.active a {
 }
 
 /* MAIN ALBUM */
+main {
+    padding-bottom: 2.75rem;
+}
+
 main.album {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -208,11 +212,25 @@ main.album figure figcaption {
 /* MAIN ARTIST */
 main.artist {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
 main.artist section {
-    
+    display: grid;
+    grid-template-columns: 80px auto;
+    margin: .75rem 5%;
+}
+
+main.artist div img {
+    width: 100%;
+    clip-path: circle(40px at center);
+    --webkit-clip-path: circle(40px at center);
+}
+
+main.artist div:nth-child(2) {
+    align-self: center;
+    padding-left: 5%;
 }
 
 
@@ -225,16 +243,14 @@ main.artist section {
     
     /* MAIN */
     main.album {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     
     
     
     /* MAIN ARTIST */
     main.artist {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     
 } // end media query
